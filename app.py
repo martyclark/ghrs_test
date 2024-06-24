@@ -4,7 +4,7 @@ from keplergl import KeplerGl
 from voila.app import Voila
 
 # Read Data
-df = pd.read_csv("merged_heatData.csv")
+df = pd.read_csv("data/merged_heatData.csv")
 gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.GCPNT_LON, df.GCPNT_LAT))
 
 # Create Kepler.gl Map (with your specific configuration)
@@ -17,3 +17,5 @@ app = Voila(map_1)  # Create the Voila app, passing your Kepler.gl map as conten
 # Run App (Optional if using 'voila app.py' command later)
 if __name__ == '__main__':
     app.run()
+
+
